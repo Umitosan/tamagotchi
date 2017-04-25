@@ -1,4 +1,4 @@
-<h1>Name: <%= @tama_name %></h1>
+<h3>Name: <%= @tama.name %></h3>
 
 <br>
 
@@ -11,6 +11,10 @@
   </div>
   <div class="col-sm-6">
     <p>Current Time: <%= @time %></p>
+    <br>
+    <p>Seconds alive: <%= @tama.time_diff %></p>
+    <br>
+    <p>Tamagotchi birth time: <%= @tama.bt %></p>
   </div>
 </div>
 
@@ -21,3 +25,4 @@
 <a class="btn btn-info" href="/play">Play</a>
 <a class="btn btn-info" href="/sleep">Send to bed</a>
 <a class="btn btn-info" href="/time">What time is it?</a>
+<a class="btn btn-warning" href="/time_diff">Tama's Age?</a>
