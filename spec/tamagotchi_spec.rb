@@ -5,10 +5,15 @@ require "pry"
 
 describe(Tama) do
 
+  before() do
+    #clear a thing
+  end
+
+  my_pet = Tama.new("magtheredon")
+
   describe("#initialize") do
     it("sets the name and life levels of a new Tamagotchi") do
-      my_pet = Tama.new("lipper")
-      expect(my_pet.name()).to(eq("lipper"))
+      expect(my_pet.name()).to(eq("magtheredon"))
       expect(my_pet.lvl()).to(eq(0))
       expect(my_pet.alive?()).to(eq(true))
       expect(my_pet.health()).to(eq(10))
@@ -16,18 +21,24 @@ describe(Tama) do
     end
   end
 
-  # describe("#is_alive") do
-  #   it("is alive if the food level is above 0") do
-  #     my_pet = Tamagotchi.new("lil dragon")
-  #     expect(my_pet.is_alive()).to(eq(true))
-  #   end
-  #
-  #   it("is dead if the food level is 0") do
-  #     my_pet = Tamagotchi.new("lil dragon")
-  #     my_pet.set_food_level() #make a method that will change the food level of your tamagotchi.
-  #     expect(my_pet.is_alive()).to(eq(false))
-  #   end
-  # end
+  describe("#play") do
+    it("returns the playful message to it's master") do
+      expect(my_pet.play()).to(eq("it's fun to play"))
+    end
+  end
+
+  describe("#feed") do
+    it("returns thank you to it's master") do
+      expect(my_pet.feed()).to(eq("mmm arigato gozaimasu"))
+    end
+  end
+
+  describe("#zzz") do
+    it("it sounds like it's sleeping") do
+      expect(my_pet.zzz()).to(eq("zzzZZZzzz"))
+    end
+  end
+
   #
   # describe("#time_passes") do
   #   it("decreases the amount of food the Tamagotchi has left by 1") do

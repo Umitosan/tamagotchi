@@ -1,5 +1,14 @@
-<%= # sample output html
-# <h2><%= @message %></h2>
-# <hr>
-# <a href="/" class="btn btn-danger">reset</a>
-%>
+<h1>Name: <%= @tama_name %></h1>
+
+<br>
+
+<strong>Level: <%= @tama_lvl %></strong><br>
+<strong>Health: <%= @tama_health %></strong><br>
+<strong>Fed Level: <%= @tama_fedlvl %></strong><br>
+<p>Communication: <%= @com %></p>
+
+<hr>
+
+<a class="btn btn-info" href="/feed">Feed</a>
+<a class="btn btn-info" href="/play">Play</a>
+<a class="btn btn-info" href="/sleep">Send to bed</a>

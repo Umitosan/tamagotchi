@@ -1,7 +1,7 @@
 
 class Tama
 
-  @@all_Tama
+  @@all_Tama = []
 
   define_method(:initialize) do |name|
     @name = name
@@ -19,8 +19,16 @@ class Tama
     "mmm arigato gozaimasu"
   end
 
-  define_method(:sleep) do
+  define_method(:zzz) do
     "zzzZZZzzz"
+  end
+
+  define_singleton_method(:add_tama) do |thistama|
+    @@all_Tama.push(thistama)
+  end
+
+  define_singleton_method(:return_tama_at_index) do |index|
+    @@all_Tama[index]
   end
 
   define_method(:name) do
