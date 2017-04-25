@@ -2,13 +2,22 @@
 
 <br>
 
-<strong>Level: <%= @tama_lvl %></strong><br>
-<strong>Health: <%= @tama_health %></strong><br>
-<strong>Fed Level: <%= @tama_fedlvl %></strong><br>
-<p>Communication: <%= @com %></p>
+<div class="row">
+  <div class="col-sm-6">
+    <strong>Level: <%= @tama.lvl %></strong><br>
+    <strong>Health: <%= @tama.health %></strong><br>
+    <strong>Fed Level: <%= @tama.fed_lvl %></strong><br>
+    <strong><p>Communication: <%= @com %></p></strong>
+  </div>
+  <div class="col-sm-6">
+    <p>Current Time: <%= @time %></p>
+  </div>
+</div>
+
 
 <hr>
 
 <a class="btn btn-info" href="/feed">Feed</a>
 <a class="btn btn-info" href="/play">Play</a>
 <a class="btn btn-info" href="/sleep">Send to bed</a>
+<a class="btn btn-info" href="/time">What time is it?</a>
