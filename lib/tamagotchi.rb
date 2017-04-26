@@ -15,7 +15,7 @@ class Tama
     @birth_time = Time.new()
   end
 
-  define_method(:bt) do
+  define_method(:get_birth_time) do
     @birth_time
   end
 
@@ -23,17 +23,6 @@ class Tama
     cur_time = Time.new()
     cur_time.to_i - @birth_time.to_i
   end
-
-  # define_method(:live_time) do
-    # Thread.new do
-    #   i = 1
-    #   while true do
-    #     i+=1
-    #     sleep 1
-    #     puts i
-    #   end
-    # end
-  # end
 
   define_method(:play) do
     @fed_lvl -= 1

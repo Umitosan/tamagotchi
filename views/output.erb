@@ -14,15 +14,20 @@
     <br>
     <p>Seconds alive: <%= @tama.time_diff %></p>
     <br>
-    <p>Tamagotchi birth time: <%= @tama.bt %></p>
+    <p>Tama's birth time: <%= @tama.get_birth_time %></p>
   </div>
 </div>
 
-
 <hr>
 
-<a class="btn btn-info" href="/feed">Feed</a>
-<a class="btn btn-info" href="/play">Play</a>
-<a class="btn btn-info" href="/sleep">Send to bed</a>
-<a class="btn btn-info" href="/time">What time is it?</a>
-<a class="btn btn-warning" href="/time_diff">Tama's Age?</a>
+<div class="row">
+  <div class="col-sm-6">
+    <a class="btn btn-info" href="/feed">Feed</a>
+    <a class="btn btn-info" href="/play">Play</a>
+    <a class="btn btn-info" href="/sleep">Send to bed</a>
+  </div>
+  <div class="col-sm-6">
+    <a class="btn btn-warning" href="/time">What time is it?</a>
+    <a class="btn btn-warning" href="/time_diff">Tama's Age?</a>
+  </div>
+</div>
